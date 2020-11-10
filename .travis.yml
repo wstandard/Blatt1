@@ -14,6 +14,7 @@ recipients:
 on_success: always
 on_failure: always
 
+script: gradlew buildCore
+
 before_install:
-- gradle buildUI
 - gradle installWrapper
