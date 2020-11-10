@@ -1,19 +1,19 @@
 language: java
-job: 
-include:
--jdk: openjdk11
-os: linux
--jdk: openjdk11
-os: osx
-allow_failures:
-os: osx
+jobs: 
+  include:
+    - jdk: openjdk11
+      os: linux
+    - jdk: openjdk11
+      os: osx
+  allow_failures:
+    - os: osx
 
-Notifications:
-email:
-recipients:
-- s4wistan@uni-trier.de
-on_success: always
-on_failure: always
+notifications:
+  email:
+    recipients:
+    - s4wistan@uni-trier.de
+  on_success: always
+  on_failure: always
 
 before_install:
 - brew install gradle
