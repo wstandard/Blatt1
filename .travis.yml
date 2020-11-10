@@ -3,7 +3,7 @@ jobs:
   include:
     - jdk: openjdk11
       os: linux
-    - jdk: openjdk11
+    - jdk: openjdk8
       os: osx
   allow_failures:
     - os: osx
@@ -16,6 +16,5 @@ notifications:
   on_failure: always
 
 before_install:
-- brew install gradle
 - gradle installWrapper
 - gradle buildCore
