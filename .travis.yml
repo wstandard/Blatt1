@@ -16,3 +16,4 @@ on_failure: always
 
 before_install:
 - gradle installWrapper
+- gradle buildUI
