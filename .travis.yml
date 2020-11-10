@@ -1,18 +1,18 @@
 job: 
-	include:
-	-jdk: openjdk11
-	os: linux
-	-jdk: openjdk8
-	os: osx
-	allow_failures:
-	-os: osx
+include:
+-jdk: openjdk11
+os: linux
+-jdk: openjdk8
+os: osx
+allow_failures:
+os: osx
 
 Notifications:
-	email:
-		recipients:
-		- s4wistan@uni-trier.de
-		on_success: always
-		on_failure: always
+email:
+recipients:
+- s4wistan@uni-trier.de
+on_success: always
+on_failure: always
 
 before_install:
-	-gradle installWrapper
+- gradle installWrapper
