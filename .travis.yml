@@ -14,8 +14,7 @@ recipients:
 on_success: always
 on_failure: always
 
-script: gradlew buildCore
-
 before_install:
 - brew install gradle
 - gradle installWrapper
+- gradle buildCorse
