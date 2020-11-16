@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Install gradle wrapper
+        run: gradle installWrapper
       - name: Grant execution permission
         run: chmod +x gradlew
       - name: Cache SonarCloud packages
